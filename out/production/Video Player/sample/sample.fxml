@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.media.MediaView?>
+
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/8.0.91" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <BorderPane prefHeight="483.0" prefWidth="612.0">
+         <bottom>
+            <VBox prefHeight="88.0" prefWidth="612.0" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox prefHeight="32.0" prefWidth="590.0">
+                     <children>
+                        <ButtonBar prefHeight="32.0" prefWidth="602.0">
+                           <buttons>
+                              <Button mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="25.0" prefWidth="494.0" text="Open" />
+                              <Button mnemonicParsing="false" onAction="#handlePauseAction" prefHeight="25.0" prefWidth="117.0" text="Pause" />
+                              <Button mnemonicParsing="false" onAction="#handleResumeAction" prefHeight="25.0" prefWidth="123.0" text="Play" />
+                           </buttons>
+                        </ButtonBar>
+                     </children>
+                  </HBox>
+                  <Button mnemonicParsing="false" onAction="#runPy" text="Button" />
+               </children>
+            </VBox>
+         </bottom>
+         <center>
+            <StackPane prefHeight="150.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <MediaView fx:id="mediaView" fitHeight="400.0" fitWidth="600.0" />
+               </children>
+            </StackPane>
+         </center>
+      </BorderPane>
+   </children>
+</GridPane>
